@@ -1,0 +1,6 @@
+[
+  {
+    "repository": "android_kernel_xiaomi_mt6768",
+    "target_path": "kernel/xiaomi/mt6768"
+  }
+]
