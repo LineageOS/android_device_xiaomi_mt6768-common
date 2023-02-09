@@ -1,4 +1,22 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "763ccd91_44378eb5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 32374
+      },
+      "writtenOn": "2023-02-09T11:52:35Z",
+      "side": 1,
+      "message": "Mi Pad 4 plus ",
+      "revId": "ef9a5b33cd3d3b276eed2e36a30f090fcb7dc48b",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ],
   "submitRequirementResults": []
 }
