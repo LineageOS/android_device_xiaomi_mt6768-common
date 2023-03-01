@@ -16,6 +16,24 @@
       "message": "Mind checking if we\u0027re really using /data/gf_data? This is the path that breaks sepolicy checks, I pushed whatever is needed to make them pass but I would hope no device uses it",
       "revId": "e2ce2d47929811a5f67c9abf127ca204b1ffe7a4",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5beda9b0_d275a961",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2023-03-01T22:09:23Z",
+      "side": 1,
+      "message": "[seba@Seba-PC lib64]$ grep -r \"/data/gf_data\"\n grep: libgf_hal.so: il file binario corrisponde\n\nmeh",
+      "parentUuid": "31efc2c2_49a423a8",
+      "revId": "e2ce2d47929811a5f67c9abf127ca204b1ffe7a4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
