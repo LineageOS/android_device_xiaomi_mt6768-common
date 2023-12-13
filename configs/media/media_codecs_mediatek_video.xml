@@ -145,11 +145,14 @@ Only the three quirks included above are recognized at this point:
             <Limit name="concurrent-instances" max="16" />
             <Limit name="performance-point-1920x1088" value="30" />
         </MediaCodec>
-        <MediaCodec name="OMX.MTK.VIDEO.DECODER.XVID" type="video/xvid" >
+        <MediaCodec name="OMX.MTK.VIDEO.DECODER.VP9.secure" type="video/x-vnd.on2.vp9" >
             <Limit name="size" min="16x16" max="1920x1088" />
             <Quirk name="requires-allocate-on-input-ports" />
             <Quirk name="requires-allocate-on-output-ports" />
-            <Limit name="concurrent-instances" max="16" />
+            <Feature name="secure-playback" required="true" />
+            <Feature name="adaptive-playback"/>
+            <Feature name="can-swap-width-height"/>
+            <Limit name="concurrent-instances" max="1" />
             <Limit name="performance-point-1920x1088" value="30" />
         </MediaCodec>
         <MediaCodec name="OMX.MTK.VIDEO.DECODER.VC1" type="video/x-ms-wmv" >
