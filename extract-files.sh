@@ -61,46 +61,30 @@ fi
 function blob_fixup {
     case "$1" in
         vendor/lib*/hw/audio.primary.mt6768.so)
-            "${PATCHELF}" --add-needed "libshim_audio.so" "${2}"
-            "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-v30.so" "${2}"
-            ;;
-        vendor/lib*/hw/audio.usb.mt6768.so)
-            "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-v30.so" "${2}"
-            ;;
-        vendor/lib64/libwifi-hal-mtk.so)
-            "$PATCHELF" --set-soname libwifi-hal-mtk.so "${2}"
-            ;;
-        vendor/lib/libMtkOmxVdecEx.so)
-            "${PATCHELF}" --replace-needed "libui.so" "libui-v32.so" "$2"
-            ;;
-        vendor/lib64/libgf_hal.so)
-            sed -i 's|\x00\x14\xa0\x83_\xb8\xfd{C\xa9\xff\x03\x01\x91\xc0\x03_\xd6\xff\x83\x01\xd1\xfd{\x05\xa9\xfdC\x01\x91|\x00\x14\xa0\x83_\xb8\xfd{C\xa9\xff\x03\x01\x91\xc0\x03_\xd6\x00\x00\xe0\xd2\xc0\x03_\xd6\xfdC\x01\x91|g' "${2}"
-            ;;
-        vendor/lib64/libmtkcam_stdutils.so)
-            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
-            ;;
-        vendor/lib*/libaalservice.so|\
-        vendor/lib*/libcam.utils.sensorprovider.so)
-            "$PATCHELF" --add-needed "libshim_sensors.so" "$2"
+            "${PATCHELF}" --replace-needed "libalsautils.so" "libalsautils-v31.so" "${2}"
             ;;
         vendor/lib64/hw/fingerprint.mt6768.so)
             sed -i 's|\xc0\x03_\xd6\x00\x00\x00\x00\xff\x03\x01\xd1\xfd{\x02\xa9|\xc0\x03_\xd6\x00\x00\x00\x00\xc0\x03_\xd6\xfd{\x02\xa9|g' "${2}"
             ;;
-        vendor/lib*/hw/dfps.mt6768.so)
+        vendor/lib*/hw/vendor.mediatek.hardware.pq@2.13-impl.so)
             "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
-        vendor/lib*/hw/vendor.mediatek.hardware.pq@2.6-impl.so |\
-        vendor/lib*/hw/android.hardware.thermal@2.0-impl.so)
-            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
+        vendor/lib*/libaalservice.so|\
+        vendor/lib*/libcam.utils.sensorprovider.so|\
+	    librgbwlightsensor.so)
+            "$PATCHELF" --add-needed "libshim_sensors.so" "$2"
             ;;
-	vendor/lib64/libmi_watermark.so)
+        vendor/lib64/libgf_hal.so)
+            sed -i 's|\x00\x14\xa0\x83_\xb8\xfd{C\xa9\xff\x03\x01\x91\xc0\x03_\xd6\xff\x83\x01\xd1\xfd{\x05\xa9\xfdC\x01\x91|\x00\x14\xa0\x83_\xb8\xfd{C\xa9\xff\x03\x01\x91\xc0\x03_\xd6\x00\x00\xe0\xd2\xc0\x03_\xd6\xfdC\x01\x91|g' "${2}"
+            ;;
+	    vendor/lib64/libmi_watermark.so)
             "${PATCHELF}" --add-needed "libpiex_shim.so" "${2}"
             ;;
-        vendor/bin/hw/android.hardware.keymaster@4.0-service.beanpod)
-            "${PATCHELF}" --add-needed "libshim_beanpod.so" "${2}"
+        vendor/lib64/libmtkcam_stdutils.so)
+            "${PATCHELF}" --replace-needed "libutils.so" "libutils-v32.so" "${2}"
             ;;
-        vendor/bin/hw/vendor.mediatek.hardware.mtkpower@1.0-service)
-            "${PATCHELF}" --replace-needed "android.hardware.power-V1-ndk_platform.so" "android.hardware.power-V1-ndk.so" "${2}"
+        vendor/lib64/libwifi-hal-mtk.so)
+            "$PATCHELF" --set-soname libwifi-hal-mtk.so "${2}"
             ;;
     esac
 }
