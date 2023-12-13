@@ -37,11 +37,6 @@ on init
     write /proc/sys/net/core/wmem_max 8388608
     write /proc/sys/net/core/rmem_max 8388608
 
-#HQ-zhangpeng modify for J19 20.08.14 start
-#set tcp_mtu_probing values to 1
-    write /proc/sys/net/ipv4/tcp_mtu_probing 1
-#HQ-zhangpeng modify for J19 20.08.14 end
-
 # update cpus for cpuset cgroup
     write /dev/cpuset/foreground/cpus 0-7
     write /dev/cpuset/foreground/boost/cpus 0-7
@@ -64,6 +59,7 @@ on charger
     mount ext4 /dev/block/platform/bootdevice/by-name/cache /cache rw wait
     chmod 0660 /dev/spm
     chown system system /dev/spm
+    start spm_script
     chmod 0666 /dev/kmsg
     chmod 0775 /mnt/vendor
     mkdir /mnt/vendor/nvcfg
@@ -166,18 +162,19 @@ on post-fs
 
     chown system system /mnt/vendor/protect_s
     chmod 0770 /mnt/vendor/protect_s
-    
-    
+
+    # allow ccci_mdinit access ccci_dump
+    chown root system /proc/ccci_dump
+
+# J15S&J19-S code for HQ-181137 by xiaqiangdan at 20220301 start
 #tp ito
     chown system system /proc/tp_selftest
     chmod 0664 /proc/tp_selftest
-    
-    
+# J15S&J19-S code for HQ-181137 by xiaqiangdan at 20220301 end
 
 on late-fs
     write /proc/bootprof "INIT:late-fs"
     wait_for_prop hwservicemanager.ready "true"
-    exec_start wait_for_keymaster
     setprop init.userspace_reboot.userdata_remount.timeoutmillis 10000
     mount_all /vendor/etc/fstab.mt6768 --late
     exec /system/bin/tune2fs -O has_journal -u 10010 -r 4096 /dev/block/platform/bootdevice/by-name/userdata
@@ -268,12 +265,14 @@ on post-fs-data
     chmod 0666 /dev/gps_emi
 
 # Smart PA
-    mkdir /data/vendor/cirrus
-    chown system system /data/vendor/cirrus
-    chmod 0777 /data/vendor/cirrus
     mkdir /mnt/vendor/persist/audio/
     chown system system /mnt/vendor/persist/audio/
     chmod 0777 /mnt/vendor/persist/audio/
+# J15S&J19-S code for HQ-195405 by guquanding at 20220314 start
+    mkdir /data/vendor/cirrus
+    chown system system /data/vendor/cirrus
+    chmod 0777 /data/vendor/cirrus
+# J15S&J19-S code for HQ-195405 by guquanding at 20220314 end
 
 # -----------------------
 # Add by MTK
@@ -328,6 +327,8 @@ on post-fs-data
     #mknod /dev/M4U_device c 188 0
     chmod 0444 /dev/m4u
     #chown system media /dev/M4U_device
+    chmod 0640 /proc/m4u
+    chown system media /proc/m4u
 
     #set mlock limit to infinate (for m4u operation)
     setrlimit 8 -1 -1
@@ -367,11 +368,11 @@ on post-fs-data
     #VideoCodec
     chmod 0660 /dev/vcu
     chown media system /dev/vcu
-    chmod 0666 /dev/video0
-    chown mediacodec system /dev/video0
-    chmod 0666 /dev/video1
-    chown mediacodec system /dev/video1
-    mkdir /data/vendor/vcodec 0770 media system
+    chmod 0660 /dev/video0
+    chown media system /dev/video0
+    chmod 0660 /dev/video1
+    chown media system /dev/video1
+    mkdir /data/vendor/vcodec 0777 media system
     mkdir /data/vendor/vcodec/log 0770 media system
     mkdir /data/vendor/vcodec/in 0770 media system
     mkdir /data/vendor/vcodec/out 0770 media system
@@ -387,11 +388,6 @@ on post-fs-data
 
     #Charging Battery
     chown radio radio /sys/devices/platform/battery/Charging_CallState
-    
-    #Runin Charge Control
-    chmod 0777 /sys/class/power_supply/battery/input_suspend
-    chown system system /sys/class/power_supply/battery/input_suspend
-    
 
     # PMIC property
     chown radio system /sys/devices/platform/mt-pmic/low_battery_protect_stop
@@ -591,7 +587,7 @@ on post-fs-data
     chown system camera /dev/CAM_CAL_DRV
     chown system camera /dev/MAINAF
     chown system camera /dev/MAIN2AF
-    chown system camera /dev/MAIN3AF    
+    chown system camera /dev/MAIN3AF
     chown system camera /dev/SUBAF
     chown system camera /dev/vpu
 
@@ -705,7 +701,7 @@ on boot
     write /proc/sys/vm/dirty_writeback_centisecs 300
     chmod 0660 /sys/power/autosleep
 
-    chmod 0666 /sys/class/leds/lcd-backlight/brightness
+    chmod 0664 /sys/class/leds/lcd-backlight/brightness
     chown system system /sys/class/leds/lcd-backlight/brightness
     chmod 0664 /sys/class/leds/red/brightness
     chown system system /sys/class/leds/red/brightness
@@ -714,19 +710,21 @@ on boot
     chmod 0664 /sys/class/leds/blue/brightness
     chown system system /sys/class/leds/blue/brightness
 
+    # J15S&J19-S code for HQ-181158 by xiaqiangdan at 20220217 start
     chmod 0664 /sys/devices/platform/flashlights_led191/led191_FLASH
     chown system system /sys/devices/platform/flashlights_led191/led191_FLASH
-    
+
     chmod 0664 /sys/devices/platform/flashlights_led191/leds/torch-light0/brightness
     chown system system /sys/devices/platform/flashlights_led191/leds/torch-light0/brightness
 
     chmod 0777 /sys/devices/platform/flashlights_led191/leds
-    chown system system /sys/devices/platform/flashlights_led191/leds 
-    
+    chown system system /sys/devices/platform/flashlights_led191/leds
+
     chmod 0664 /sys/devices/platform/bootdevice/mmc_host/mmc0/mmc0:0001/serial
-    chown system system /sys/devices/platform/bootdevice/mmc_host/mmc0/mmc0:0001/serial   
-    
+    chown system system /sys/devices/platform/bootdevice/mmc_host/mmc0/mmc0:0001/serial
+
     chmod  0777 /dev/nq-nci
+    # J15S&J19-S code for HQ-181158 by xiaqiangdan at 20220217 end
 
     chown system system /sys/devices/system/cpu/cpufreq/hotplug/cpu_num_base
     chmod 0660 /sys/devices/system/cpu/cpufreq/hotplug/cpu_num_base
@@ -776,7 +774,10 @@ on boot
     chown root root /dev/graphics/fb0
     chmod 0666 /dev/graphics/fb0
 
-    chown root system /sys/class/huaqin/interface/hw_info/main0_cam
+    chmod 0777 /sys/class/power_supply/battery/input_suspend
+    chown system system /sys/class/power_supply/battery/input_suspend
+
+	chown root system /sys/class/huaqin/interface/hw_info/main0_cam
     chmod 0666 /sys/class/huaqin/interface/hw_info/main0_cam
     chown root system /sys/class/huaqin/interface/hw_info/main1_cam
     chmod 0666 /sys/class/huaqin/interface/hw_info/main1_cam
@@ -786,6 +787,8 @@ on boot
     chmod 0666 /sys/class/huaqin/interface/hw_info/main3_cam
     chown root system /sys/class/huaqin/interface/hw_info/sub_cam
     chmod 0666 /sys/class/huaqin/interface/hw_info/sub_cam
+
+
 # Smartbook Handler Framework
     chown system system /sys/power/sb_state
     chmod 0660 /sys/power/sb_state
@@ -925,6 +928,8 @@ on boot
     chown system radio /dev/ttyGS1
 
     chown system system /sys/class/thermal/thermal_message/sconfig
+#Power Manager
+    write /sys/power/pm_freeze_timeout 2000
 
     # DT2W
     chown system system /sys/touchpanel/double_tap
@@ -940,9 +945,6 @@ service charge_logger /vendor/bin/charge_logger
 
 on property:sys.boot_completed=1
 	start charge_logger
-
-#Power Manager
-    write /sys/power/pm_freeze_timeout 2000
 
 # end boot time fs tune
 on property:sys.boot_completed=1
@@ -992,40 +994,6 @@ on property:sys.boot_completed=1
 on property:sys.boot_completed=1
     setprop vendor.powerhal.init 1
 
-#service dpfd /vendor/bin/dpfd
-#	user root
-#	group system media
-
-#
-#  External Modme control related services
-#
-
-#
-#  Modem related services (Begin)
-#
-##Add by T.Zh for ppp daemon
-#service pppd /system/bin/pppd file /data/misc/ppp/ppp_options
-#    user root
-#    disabled
-#    oneshot
-#
-##
-#
-#  Modem related services (End)
-#
-
-#add for power-off alarm
-#service poad /vendor/bin/poad
-#    class main
-#    user system
-#    group system
-#    oneshot
-
-#service BGW /vendor/xbin/BGW
-#	user system
-#	group gps system radio
-#	class main
-
 # Battery info
 on property:persist.vendor.mediatek.fg.disable=1
     write /sys/devices/platform/battery_meter/FG_daemon_disable 1
@@ -1044,17 +1012,6 @@ on property:persist.vendor.mediatek.fg.log.enable=1
     write /sys/bus/platform/devices/battery/FG_daemon_log_level 7
     write /proc/sys/kernel/printk 8
 
-
-# add meta_tst for ATM
-service meta_tst /vendor/bin/meta_tst
-    class main
-    user system
-    group radio gps system wifi audio bluetooth media
-    capabilities NET_RAW NET_ADMIN
-    disabled
-    oneshot
-
-
 service initprop_bin /system/vendor/bin/initprop_bin
     class main
     user root
@@ -1063,7 +1020,6 @@ service initprop_bin /system/vendor/bin/initprop_bin
 
 on property:vendor.service.nvram_init=Ready
     start initprop_bin
-
 
 on property:persist.odm.ril.oem.sno=*
     setprop ro.ril.oem.sno ${persist.odm.ril.oem.sno}
@@ -1088,116 +1044,23 @@ on property:persist.odm.ril.oem.imei1=*
 on property:persist.odm.ril.oem.imei2=*
     setprop ro.ril.oem.imei2 ${persist.odm.ril.oem.imei2}
 
-service openad /system/vendor/bin/displayf_bin s 1
+# reset mdmode when modem crash happens in ATM
+on property:vendor.mtk.md1.status=reset
+    setprop persist.vendor.atm.mdmode normal
+
+on init
+    symlink /dev/block/platform/bootdevice /dev/block/bootdevice
+
+service mi_thermald /vendor/bin/mi_thermald
+    class main
     user root
-    group root system graphics
-    oneshot
-    disabled
-
-on property:sys.hq.ad=1
-    start openad
-
-service closead /system/vendor/bin/displayf_bin s 0
-    user root
-    group root system graphics
-    oneshot
-    disabled
-
-on property:sys.hq.ad=0
-    start closead
+    group system
 
 # add PcbaConfigSet
 service PcbaConfigSet /system/vendor/bin/PcbaConfigSet
     class core
     oneshot
 
-service screenmode0 /system/vendor/bin/factory_bin s 0
-    class main
-    user root
-    oneshot
-    disabled
-
-service screenmode1 /system/vendor/bin/factory_bin s 1
-    class main
-    user root
-    oneshot
-    disabled
-
-service screenmode3 /system/vendor/bin/factory_bin s 3
-    class main
-    user root
-    oneshot
-    disabled
-
-service openpocket /system/vendor/bin/factory_bin p 1
-    class main
-    user root
-    oneshot
-    disabled
-
-service closepocket /system/vendor/bin/factory_bin p 0
-    class main
-    user root
-    oneshot
-    disabled
-
-service enablefreqhop /system/vendor/bin/factory_bin c 1
-    class main
-    user root
-    oneshot
-    disabled
-
-service disablefreqhop /system/vendor/bin/factory_bin c 0
-    class main
-    user root
-    oneshot
-    disabled
-
-on init
-    symlink /dev/block/platform/bootdevice /dev/block/bootdevice
-service enableswtp /system/vendor/bin/factory_bin z 1
-    class main
-    user root
-    oneshot
-    disabled
-
-service disableswtp /system/vendor/bin/factory_bin z 0
-    class main
-    user root
-    oneshot
-    disabled
-
-service gaogpio /system/vendor/bin/factory_bin y 1
-    class main
-    user root
-    oneshot
-    disabled
-
-service digpio /system/vendor/bin/factory_bin y 0
-    class main
-    user root
-    oneshot
-    disabled
-
-# FPSGO FBT Game
-on boot
-    insmod /vendor/lib/modules/fpsgo.ko
-
-service maxcurrentNocall /system/vendor/bin/factory_bin m 0
-    class main
-    user root
-    oneshot
-    disabled
-
-service maxcurrentIncall /system/vendor/bin/factory_bin m 1
-    class main
-    user root
-    oneshot
-    disabled
-
-service mi_thermald /vendor/bin/mi_thermald
-    class main
-    user root
-    group system
 on property:odm.audio.typec.status=*
     setprop vendor.audio.typec.status ${odm.audio.typec.status}
+

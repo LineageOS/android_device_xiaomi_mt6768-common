@@ -26,6 +26,9 @@ on post-fs-data
     chmod 0660 /dev/m_bio_misc
     chmod 0660 /dev/biometric
     chmod 0660 /dev/sensorlist
+    #modify sar Authority for HQ-218194 by huitianpu at 2022.6.21 start
+    chmod 0666 /dev/sar
+    #modify sar Authority for HQ-218194 by huitianpu at 2022.6.21 end
 
     chown system system /dev/hwmsensor
     chown system system /dev/msensor
@@ -50,6 +53,9 @@ on post-fs-data
     chown system system /dev/m_bio_misc
     chown system system /dev/biometric
     chown system system /dev/sensorlist
+    #modify sar Authority for HQ-218194 by huitianpu at 2022.6.21 start
+    chown system system /dev/sar
+    #modify sar Authority for HQ-218194 by huitianpu at 2022.6.21 end
 
     chmod 0660 /sys/class/sensor/m_acc_misc/accenablenodata
     chmod 0660 /sys/class/sensor/m_acc_misc/accactive
