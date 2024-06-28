@@ -378,6 +378,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek
 
+# Virtualization
+$(call inherit-product, packages/modules/Virtualization/apex/product_packages.mk)
+
 # Wi-Fi
 PRODUCT_PACKAGES += \
     android.hardware.wifi.supplicant@1.0.vendor \

@@ -56,6 +56,11 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
 
+NO_BOARD_KERNEL_CMDLINE += \
+    androidboot.hypervisor.version=114514 \
+    androidboot.hypervisor.vm.supported=1 \
+    androidboot.hypervisor.protected_vm.supported=0
+
 # Display
 TARGET_ADDITIONAL_GRALLOC_10_USAGE_BITS := 0x2000U
 
