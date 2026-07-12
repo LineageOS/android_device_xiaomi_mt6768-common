@@ -48,8 +48,6 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b': blob_fixup()
         .add_needed('libstagefright_foundation-v33.so')
         .replace_needed('libavservices_minijail_vendor.so', 'libavservices_minijail.so'),
-    'vendor/bin/hw/mtkfusionrild' : blob_fixup()
-        .add_needed('libutils-v32.so'),
     'vendor/lib64/hw/fingerprint.mt6768.so': blob_fixup()
         .binary_regex_replace(
             b'\xc0\x03\x5f\xd6\x00\x00\x00\x00\xff\x03\x01\xd1\xfd\x7b\x02\xa9',
@@ -59,9 +57,9 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libutils.so', 'libutils-v32.so')
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     (
+        'vendor/bin/mnld',
         'vendor/lib64/libaalservice.so',
-        'vendor/lib64/libcam.utils.sensorprovider.so',
-        'librgbwlightsensor.so',
+        'vendor/lib64/librgbwlightsensor.so',
     ): blob_fixup()
         .replace_needed('libsensorndkbridge.so', 'android.hardware.sensors@1.0-convert-shared.so'),
     'vendor/lib64/libgf_hal.so': blob_fixup()
@@ -71,18 +69,11 @@ blob_fixups: blob_fixups_user_type = {
         ),
     'vendor/lib64/libgoodixhwfingerprint.so': blob_fixup()
         .replace_needed('libvendor.goodix.hardware.biometrics.fingerprint@2.1.so', 'vendor.goodix.hardware.biometrics.fingerprint@2.1.so'),
-    'vendor/lib64/libmi_watermark.so': blob_fixup()
-        .add_needed('libpiex_shim.so'),
-    (
-        'vendor/lib64/libmtkcam_stdutils.so',
-        'vendor/lib64/hw/android.hardware.camera.provider@2.6-impl-mediatek.so',
-    ): blob_fixup()
-        .replace_needed('libutils.so', 'libutils-v32.so'),
-    ('vendor/lib64/libteei_daemon_vfs.so', 'vendor/lib64/lib3a.flash.so', 'vendor/lib64/libSQLiteModule_VER_ALL.so'): blob_fixup()
+    'vendor/lib64/libteei_daemon_vfs.so': blob_fixup()
          .add_needed('liblog.so'),
      'vendor/lib64/libmnl.so' : blob_fixup()
          .add_needed('libcutils.so'),
-    ('vendor/lib/libnvram.so', 'vendor/lib64/libnvram.so', 'vendor/lib64/libsysenv.so', 'vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron') : blob_fixup()
+    ('vendor/lib/libnvram.so', 'vendor/lib64/libnvram.so', 'vendor/bin/hw/android.hardware.neuralnetworks@1.3-service-mtk-neuron') : blob_fixup()
          .add_needed('libbase_shim.so'),
     'vendor/lib64/hw/hwcomposer.mt6768.so' : blob_fixup()
          .add_needed('libprocessgroup_shim.so'),
