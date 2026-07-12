@@ -399,7 +399,7 @@ vendor/lib64/hw/consumerir.common.so:vendor/lib64/hw/consumerir.mt6768.so
 # DRM
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
 vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc
--vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
+vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml
 vendor/lib/liboemcrypto.so
 vendor/lib/libtlcWidevineModularDrm.so
 vendor/lib/libwvhidl.so
@@ -418,7 +418,7 @@ vendor/bin/hw/android.hardware.graphics.allocator@4.0-service-mediatek
 vendor/bin/vpud
 vendor/etc/init/android.hardware.graphics.allocator@4.0-service-mediatek.rc
 vendor/etc/init/vpud.rc
--vendor/etc/vintf/manifest/manifest_hwcomposer.xml
+vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/lib/arm.graphics-V1-ndk_platform.so
 vendor/lib/egl/egl.cfg
 vendor/lib/egl/libGLES_mali.so
@@ -539,7 +539,7 @@ vendor/firmware/wifi.cfg
 vendor/firmware/soc1_0_ram_bt_1a_1_hdr.bin|9cd0d79cde76a59ddd8545b1621af1176c5f9605
 
 # FM Radio
--system_ext/lib64/libfmjni.so:system/lib64/libfmjni.so
+system_ext/lib64/libfmjni.so:system/lib64/libfmjni.so
 
 # GPS
 vendor/bin/bip
@@ -820,40 +820,40 @@ vendor/lib64/libwapi.so
 vendor/lib64/vendor.mediatek.hardware.dmc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.dmc@1.1.so
 vendor/lib64/vendor.mediatek.hardware.dmc@1.2.so
-vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so
+vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor
 
 # IMS-System
-bin/vtservice
-etc/init/init.vtservice.rc
--framework/mediatek-common.jar
--framework/mediatek-framework.jar
--framework/mediatek-ims-base.jar
--framework/mediatek-ims-common.jar
--framework/mediatek-ims-extension-plugin.jar
--framework/mediatek-ims-legacy.jar
--framework/mediatek-telecom-common.jar
--framework/mediatek-telephony-base.jar
--framework/mediatek-telephony-common.jar
-lib/libmtk_vt_wrapper.so
-lib/libmtkavenhancements.so
-lib/libvcodec_cap.so
-lib/libvsim-adaptor-client.so
-lib64/libcomutils.so
-lib64/libimsma.so
-lib64/libimsma_adapt.so
-lib64/libimsma_rtp.so
-lib64/libimsma_socketwrapper.so
-lib64/libmtk_vt_service.so
-lib64/libmtk_vt_wrapper.so
-lib64/libmtkavenhancements.so
-lib64/libsignal.so
-lib64/libsink.so
-lib64/libsource.so
-lib64/libvcodec_cap.so
-lib64/libvcodec_capenc.so
-lib64/libvsim-adaptor-client.so
-lib64/libvt_avsync.so
--priv-app/ImsService/ImsService.apk
+system/bin/vtservice
+system/etc/init/init.vtservice.rc
+system/framework/mediatek-common.jar
+system/framework/mediatek-framework.jar
+system/framework/mediatek-ims-base.jar
+system/framework/mediatek-ims-common.jar
+system/framework/mediatek-ims-extension-plugin.jar
+system/framework/mediatek-ims-legacy.jar
+system/framework/mediatek-telecom-common.jar
+system/framework/mediatek-telephony-base.jar
+system/framework/mediatek-telephony-common.jar
+system/lib/libmtk_vt_wrapper.so
+system/lib/libmtkavenhancements.so
+system/lib/libvcodec_cap.so
+system/lib/libvsim-adaptor-client.so
+system/lib64/libcomutils.so
+system/lib64/libimsma.so
+system/lib64/libimsma_adapt.so
+system/lib64/libimsma_rtp.so
+system/lib64/libimsma_socketwrapper.so
+system/lib64/libmtk_vt_service.so
+system/lib64/libmtk_vt_wrapper.so
+system/lib64/libmtkavenhancements.so
+system/lib64/libsignal.so
+system/lib64/libsink.so
+system/lib64/libsource.so
+system/lib64/libvcodec_cap.so
+system/lib64/libvcodec_capenc.so
+system/lib64/libvsim-adaptor-client.so
+system/lib64/libvt_avsync.so
+system/priv-app/ImsService/ImsService.apk
 system_ext/lib/vendor.mediatek.hardware.videotelephony@1.0.so
 system_ext/lib64/vendor.mediatek.hardware.dmc@1.1.so
 system_ext/lib64/vendor.mediatek.hardware.dmc@1.2.so
@@ -1031,7 +1031,7 @@ vendor/lib/libapmonitor_vendor.so
 vendor/lib/vendor.mediatek.hardware.apmonitor@2.0.so
 vendor/lib64/libapmonitor_vendor.so
 vendor/lib64/libconnfem.so
--vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so
+vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
 vendor/lib64/libwifitest.so
 vendor/lib64/libwpfa.so
 vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so
