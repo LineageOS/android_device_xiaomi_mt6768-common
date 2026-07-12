@@ -18,7 +18,7 @@ vendor/lib64/libaalservice.so
 vendor/lib/hw/audio.r_submix.mt6768.so
 vendor/lib/lib_iir.so
 vendor/lib/lib_speech_enh.so
-vendor/lib/libalsautils.so:vendor/lib/libalsautils-v31.so
+vendor/lib/libalsautils.so:vendor/lib/libalsautils-v31.so;FIX_SONAME
 vendor/lib/libaudio_param_parser-vnd.so
 vendor/lib/libaudiocomponentengine_vendor.so
 vendor/lib/libaudiocomponentenginec.so
@@ -31,7 +31,7 @@ vendor/lib/libaurisysdemo.so
 vendor/lib/libbessound_hd_mtk_vendor.so
 vendor/lib/libblisrc32_vendor.so
 vendor/lib/libcvsd_mtk.so
-vendor/lib/libspeech_enh_lib.so
+vendor/lib/libspeech_enh_lib.so;FIX_SONAME
 vendor/lib/libspeechparser_vendor.so
 vendor/lib/vendor.mediatek.hardware.audio@6.1.so
 vendor/lib/vendor.mediatek.hardware.audio@7.1.so
@@ -39,7 +39,7 @@ vendor/lib64/hw/audio.r_submix.mt6768.so
 vendor/lib64/libMtkSpeechEnh.so
 vendor/lib64/lib_iir.so
 vendor/lib64/lib_speech_enh.so
-vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-v31.so
+vendor/lib64/libalsautils.so:vendor/lib64/libalsautils-v31.so;FIX_SONAME
 vendor/lib64/libaudio_param_parser-vnd.so
 vendor/lib64/libaudiocomponentengine_vendor.so
 vendor/lib64/libaudiocomponentenginec.so
@@ -58,7 +58,7 @@ vendor/lib64/libmnl.so
 vendor/lib64/libmsbc_mtk.so
 vendor/lib64/libmsnr.so
 vendor/lib64/libmtk-fusion-ril-prop-vsim.so
-vendor/lib64/libspeech_enh_lib.so
+vendor/lib64/libspeech_enh_lib.so;FIX_SONAME
 vendor/lib64/libspeechparser_vendor.so
 vendor/lib64/libstereoinfoaccessor_vsdof.so
 vendor/lib64/vendor.mediatek.hardware.audio@6.1.so
@@ -393,8 +393,8 @@ vendor/lib64/vendor.mediatek.hardware.camera.postproc@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.security@1.0.so
 
 # IR
-vendor/lib/hw/consumerir.common.so:vendor/lib/hw/consumerir.mt6768.so
-vendor/lib64/hw/consumerir.common.so:vendor/lib64/hw/consumerir.mt6768.so
+vendor/lib/hw/consumerir.common.so:vendor/lib/hw/consumerir.mt6768.so;FIX_SONAME
+vendor/lib64/hw/consumerir.common.so:vendor/lib64/hw/consumerir.mt6768.so;FIX_SONAME
 
 # DRM
 vendor/bin/hw/android.hardware.drm@1.4-service.widevine
@@ -481,8 +481,8 @@ vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 
 # Fingerprint
 vendor/lib64/com.fingerprints.extension@1.0.so
-vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.mt6768.so
-vendor/lib64/hw/gf_fingerprint.default.so
+vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.mt6768.so;FIX_SONAME
+vendor/lib64/hw/gf_fingerprint.default.so;FIX_SONAME
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so
@@ -970,7 +970,7 @@ vendor/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
 vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 
 # Sensors
-vendor/lib/libakm.so
+vendor/lib/libakm.so;FIX_SONAME
 vendor/lib/libhwm.so
 vendor/lib64/libhwm.so
 vendor/lib64/libksensor.so
@@ -1049,7 +1049,7 @@ vendor/lib/libcmdl.so
 vendor/lib/libcmdl_ndk.mtk.vndk.so
 vendor/lib/libneuroeara.so
 vendor/lib/libneuropilot_hal_utils.so
-vendor/lib/libnir_neon_driver_ndk.mtk.vndk.so
+vendor/lib/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
 vendor/lib/libtflite_mtk.so
 vendor/lib64/libarmnn.so
 vendor/lib64/libarmnn_ndk.mtk.vndk.so
@@ -1059,7 +1059,7 @@ vendor/lib64/libneuroeara.so
 vendor/lib64/libneuron_adapter.so
 vendor/lib64/libneuron_platform.so
 vendor/lib64/libneuropilot_hal_utils.so
-vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so
+vendor/lib64/libnir_neon_driver_ndk.mtk.vndk.so;FIX_SONAME
 vendor/lib64/libnxp_extamp_intf.so
 vendor/lib64/libtflite_mtk.so
 
