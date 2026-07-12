@@ -349,6 +349,7 @@ PRODUCT_PACKAGES += \
 # Sensors
 PRODUCT_PACKAGES += \
     libsensorndkbridge \
+    android.hardware.sensors@1.0-convert-shared.vendor \
     android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@2.0-subhal-impl-1.0:64 \
     android.hardware.sensors-service.xiaomi-multihal
@@ -358,7 +359,6 @@ PRODUCT_COPY_FILES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libshim_sensors \
     libpiex_shim
 
 # Soong namespaces
