@@ -373,6 +373,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/mediatek \
+    hardware/xiaomi \
     $(LOCAL_PATH)
 
 # Thermal
