@@ -16,18 +16,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.service \
-    android.hardware.audio@7.0-impl \
-    android.hardware.audio.effect@7.0-impl \
-    android.hardware.bluetooth.audio-impl
+    android.hardware.audio@7.0-impl:32 \
+    android.hardware.audio.effect@7.0-impl:32 \
+    android.hardware.bluetooth.audio-impl:32
 
 PRODUCT_PACKAGES += \
-    audio.bluetooth.default \
-    audio.r_submix.default \
-    audio.usb.default
+    audio.bluetooth.default:32 \
+    audio.r_submix.default:32 \
+    audio.usb.default:32
 
 PRODUCT_PACKAGES += \
-    libaudiofoundation.vendor \
-    libtinycompress \
+    libaudiofoundation.vendor:32 \
+    libtinycompress:32 \
     tinymix
 
 PRODUCT_PACKAGES += \
