@@ -270,7 +270,7 @@ vendor/etc/camera/mibokeh_mt6768_parameter.bin
 vendor/etc/init/camerahalserver.rc
 vendor/etc/sceneDetection.xml
 vendor/lib/libcam.halsensor.hwintegration.so
-vendor/lib/mt6768/libmtk_drvb.so
+vendor/lib/mt6768/libmtk_drvb.so;SYMLINK=vendor/lib/libmtk_drvb.so
 vendor/lib64/hw/vendor.mediatek.hardware.camera.lomoeffect@1.0-impl.so
 vendor/lib64/lib3a.ae.core.so
 vendor/lib64/lib3a.ae.so
@@ -382,7 +382,7 @@ vendor/lib64/libremosaic_wrapper.so
 vendor/lib64/libremosaiclib.so
 vendor/lib64/libvidhance.so
 vendor/lib64/libwa_ancbase.so
-vendor/lib64/mt6768/libmtk_drvb.so
+vendor/lib64/mt6768/libmtk_drvb.so;SYMLINK=vendor/lib64/libmtk_drvb.so
 vendor/lib64/mtkcam/libmtkcam_streaminfo_plugin-p1stt.so
 vendor/lib64/vendor.mediatek.hardware.camera.atms@1.0.so
 vendor/lib64/vendor.mediatek.hardware.camera.ccap@1.0.so
@@ -421,7 +421,7 @@ vendor/etc/init/vpud.rc
 vendor/etc/vintf/manifest/manifest_hwcomposer.xml
 vendor/lib/arm.graphics-V1-ndk_platform.so
 vendor/lib/egl/egl.cfg
-vendor/lib/egl/libGLES_mali.so
+vendor/lib/egl/libGLES_mali.so;SYMLINK=vendor/lib/hw/vulkan.mt6768.so
 vendor/lib/egl/libGLES_meow.so
 vendor/lib/egl/libMEOW_data.so
 vendor/lib/egl/libMEOW_gift.so
@@ -444,10 +444,10 @@ vendor/lib/libion_ulit.so
 vendor/lib/libmml.so
 vendor/lib/libpqframework.so
 vendor/lib/libvpud_vcodec.so
-vendor/lib/mt6768/libdpframework.so
-vendor/lib/mt6768/libnir_neon_driver.so
+vendor/lib/mt6768/libdpframework.so;SYMLINK=vendor/lib/libdpframework.so
+vendor/lib/mt6768/libnir_neon_driver.so;SYMLINK=vendor/lib/libnir_neon_driver.so
 vendor/lib64/arm.graphics-V1-ndk_platform.so
-vendor/lib64/egl/libGLES_mali.so
+vendor/lib64/egl/libGLES_mali.so;SYMLINK=vendor/lib64/hw/vulkan.mt6768.so
 vendor/lib64/egl/libGLES_meow.so
 vendor/lib64/egl/libMEOW_data.so
 vendor/lib64/egl/libMEOW_gift.so
@@ -475,8 +475,8 @@ vendor/lib64/libion_ulit.so
 vendor/lib64/libmml.so
 vendor/lib64/libpqframework.so
 vendor/lib64/libpqparamparser.so
-vendor/lib64/mt6768/libdpframework.so
-vendor/lib64/mt6768/libnir_neon_driver.so
+vendor/lib64/mt6768/libdpframework.so;SYMLINK=vendor/lib64/libdpframework.so
+vendor/lib64/mt6768/libnir_neon_driver.so;SYMLINK=vendor/lib64/libnir_neon_driver.so
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 
 # Fingerprint
@@ -611,9 +611,9 @@ vendor/etc/slp_conf
 
 # Gatekeeper
 vendor/lib/hw/gatekeeper.beanpod.so
-vendor/lib/hw/libSoftGatekeeper.so
+vendor/lib/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib/hw/gatekeeper.default.so
 vendor/lib64/hw/gatekeeper.beanpod.so
-vendor/lib64/hw/libSoftGatekeeper.so
+vendor/lib64/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib/hw/gatekeeper.default.so
 
 # Keymaster
 vendor/bin/bp_kmsetkey_ca
@@ -640,7 +640,7 @@ vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
 vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
 vendor/lib/hw/vendor.mediatek.hardware.pq@2.13-impl.so
 vendor/lib/libpq_cust_base.so
-vendor/lib/mt6768/libpq_prot.so
+vendor/lib/mt6768/libpq_prot.so;SYMLINK=vendor/lib/libpq_prot.so
 vendor/lib/vendor.mediatek.hardware.pq@2.0.so
 vendor/lib/vendor.mediatek.hardware.pq@2.1.so
 vendor/lib/vendor.mediatek.hardware.pq@2.10.so
@@ -657,7 +657,7 @@ vendor/lib/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib/vendor.mediatek.hardware.pq@2.9.so
 vendor/lib64/hw/vendor.mediatek.hardware.pq@2.13-impl.so
 vendor/lib64/libpq_cust_base.so
-vendor/lib64/mt6768/libpq_prot.so
+vendor/lib64/mt6768/libpq_prot.so;SYMLINK=vendor/lib64/libpq_prot.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.1.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.10.so
@@ -742,7 +742,7 @@ vendor/lib64/libvideofilter_only.so
 vendor/lib64/libvpu5.so
 
 # Media (Codec2)
-vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b
+vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b;SYMLINK=vendor/bin/hw/android.hardware.media.c2@1.2-mediatek
 vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc
 vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml
 vendor/lib64/libcodec2_mtk_c2store.so
