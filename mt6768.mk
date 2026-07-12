@@ -58,6 +58,10 @@ PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/cgroups_30.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
     $(LOCAL_PATH)/configs/task_profiles.json:$(TARGET_COPY_OUT_VENDOR)/etc/task_profiles.json
 
+# Chipinfo
+PRODUCT_PACKAGES += \
+    chipinfo
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
