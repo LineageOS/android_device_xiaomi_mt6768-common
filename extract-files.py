@@ -39,10 +39,7 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so',
     ): blob_fixup()
         .replace_needed('android.hardware.gnss-V1-ndk_platform.so', 'android.hardware.gnss-V1-ndk.so'),
-    (
-        'vendor/bin/hw/android.hardware.media.c2@1.2-mediatek',
-        'vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b',
-    ): blob_fixup()
+    'vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b': blob_fixup()
         .add_needed('libstagefright_foundation-v33.so')
         .replace_needed('libavservices_minijail_vendor.so', 'libavservices_minijail.so'),
     'vendor/lib/hw/audio.primary.mt6768.so': blob_fixup()
