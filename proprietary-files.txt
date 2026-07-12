@@ -970,9 +970,6 @@ vendor/lib64/vendor.mediatek.hardware.mtkradioex@3.0.so
 vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 
 # Sensors
-vendor/bin/hw/android.hardware.sensors@2.0-service.multihal-mediatek
-vendor/etc/init/android.hardware.sensors@2.0-service.multihal-mediatek.rc
-vendor/etc/sensors/hals.conf
 vendor/lib/libakm.so
 vendor/lib/libhwm.so
 vendor/lib64/hw/android.hardware.sensors@2.X-subhal-mediatek.so
