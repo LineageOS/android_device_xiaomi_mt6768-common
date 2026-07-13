@@ -760,30 +760,32 @@ vendor/lib64/vendor.mediatek.hardware.dmc@1.1.so
 vendor/lib64/vendor.mediatek.hardware.dmc@1.2.so
 vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendor
 
-# IMS-System - from plato-user 14 UP1A.230620.001 V816.0.12.0.ULQMIXM release-keys
-system_ext/bin/vtservice|eeb08595c53be9d7a69ba5b677b5604f753eab37
+# IMS (VT - System) - from rothko 16 BP2A.250605.015 OS2.0.215.0.WNNMIXM
+system_ext/bin/vtservice|4a8759f67cc4f238983c57193d88d1cc13956e06
 system_ext/etc/init/init.vtservice.rc|50a2249906edc06059b443513db47a2ddc0490dc
+system_ext/lib64/libcomutils.so|05cdfb5eb128b670ec182235e75efeec2dd21773
+system_ext/lib64/libimsma.so|ef84a4ebd120834a1514197af96101e81839cd12|1b581eee25e72f399b7d6ebb11595f7cee03a8f8
+system_ext/lib64/libimsma_adapt.so|de3b5546ff7a5dc9f7ba3db3f06b53498600490d
+system_ext/lib64/libimsma_rtp.so|1291ec8904cebd796da60244a14f2dff791fe96f
+system_ext/lib64/libimsma_socketwrapper.so|aaa678a3fe154066bd47c9ed67105a7b941b7cf9
+system_ext/lib64/libmtk_vt_service.so|a1ba6d03b7ba0584885f252f1faf5d980659eac0
+system_ext/lib64/libmtk_vt_wrapper.so|9b62da09fbf2b89270a7734511f1d6fe76aa7e63
+system_ext/lib64/libsignal.so|38ab61c18cedce065ff16cbc71dbdf15681538f3
+system_ext/lib64/libsink.so:system_ext/lib64/libsink-mtk.so;FIX_SONAME|ff807e93274637dc2c183680cd1df540a18a9df8|08df824f92bd139a6711b6b5ae3fcbd550244b99
+system_ext/lib64/libsource.so|06d0948067791d30befd3d84adb196287b9bcc18
+system_ext/lib64/libvcodec_cap.so|a49da521496c7778b756654f7251657a8f04cc4f
+system_ext/lib64/libvcodec_capenc.so|5274c56e4c07a21cf3ff3b9678231a6d9c3ffe7c
+system_ext/lib64/libvt_avsync.so|548242bff6b4472f212bf18cdec7753088885a10
+system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so|8b13966bdf703d2eae99d4f65a2e77fbd939064c
+system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so|01b68c7597d585ec39441628f66b02b3b091db99
+
+# IMS-System - from plato-user 14 UP1A.230620.001 V816.0.12.0.ULQMIXM release-keys
 system_ext/framework/mediatek-ims-base.jar:system/framework/mediatek-ims-base.jar;BOOT_JAR|a6f7ae937de5b9c25e41af8c15db2717a31a6e97
 system_ext/framework/mediatek-ims-common.jar:system/framework/mediatek-ims-common.jar;BOOT_JAR|90e4bb7a6b8264f71dbcf4b4ec53a88d9e842ba2
 system_ext/framework/mediatek-ims-extension-plugin.jar:system/framework/mediatek-ims-extension-plugin.jar;BOOT_JAR|4562720d65136b189d661f248fd3170a749cada3
 system_ext/framework/mediatek-telecom-common.jar:system/framework/mediatek-telecom-common.jar;BOOT_JAR|686eaf0a472f44194116a0861944483cd9b09a38
 system_ext/framework/mediatek-telephony-base.jar:system/framework/mediatek-telephony-base.jar;BOOT_JAR|6248b5b3fcf935ef59ab3c20b0c11a104e8fbe79
 system_ext/framework/mediatek-telephony-common.jar:system/framework/mediatek-telephony-common.jar;BOOT_JAR|cee3f9c3dad9da1a98a5231fb2a942c41de62676
-system_ext/lib64/libcomutils.so|fae6b5fd7628518eaf3e3eadac2133dd83f30839
-system_ext/lib64/libimsma.so|6e754e450f7d2a83b458ea617919aa50da68fdfa
-system_ext/lib64/libimsma_adapt.so|8355d71bcb992d1f203824a1b07fa48da1f2ff50
-system_ext/lib64/libimsma_rtp.so|25b249764ba9df7d89f3af209f38e4cb4993ddb3
-system_ext/lib64/libimsma_socketwrapper.so|5a26aae9eee36b9e5dc8875aa68b20ced2e1b676
-system_ext/lib64/libmtk_vt_service.so|6fdb05eb75c1c1db258fd64b24dffd4d5d208484
-system_ext/lib64/libmtk_vt_wrapper.so|bfe8b004442b6450dbaddf91d9ddddd26d4f1eed
-system_ext/lib64/libsignal.so|5595f5d7b6e7320572ec05ac199f951d141b516a
-system_ext/lib64/libsink.so:system_ext/lib64/libsink-mtk.so;FIX_SONAME|3fdd403b1e955d735e8da0ff3dbb3317388a4390|11990d2884c527db267cc139b1dc4a35ba632063
-system_ext/lib64/libsource.so|ae532bd41547fd72c77456a94843fe94201d947c
-system_ext/lib64/libvcodec_cap.so|6205e88ebdb16a10f06ed3999e64e21ab77bcae2
-system_ext/lib64/libvcodec_capenc.so|2a9dd2edc46a17f402f342f09035ba5c25bb7ea2
-system_ext/lib64/libvt_avsync.so|186a5263b1be36e3f5ba47c0e8b40bca48a6b382
-system_ext/lib64/vendor.mediatek.hardware.videotelephony-V1-ndk.so|037d44e408f08b7d0d23cd9a80de26102ae9e856
-system_ext/lib64/vendor.mediatek.hardware.videotelephony@1.0.so|ef998601b41eefe3f981bf773fa34b0445f6ad65
 system_ext/priv-app/ImsService/ImsService.apk:system/priv-app/ImsService/ImsService.apk|e4bc27e84c86a03f1db24d206f7f153697f9b7f2
 
 # Power
