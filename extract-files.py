@@ -35,6 +35,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'system/lib64/libimsma.so': blob_fixup()
+        .replace_needed('libsink.so', 'libsink-mtk.so'),
     (
         'vendor/bin/hw/android.hardware.gnss-service.mediatek',
         'vendor/lib64/hw/android.hardware.gnss-impl-mediatek.so',
