@@ -508,9 +508,6 @@ vendor/firmware/wifi.cfg
 # Firmware - from A145PXXU1AWA3
 vendor/firmware/soc1_0_ram_bt_1a_1_hdr.bin|9cd0d79cde76a59ddd8545b1621af1176c5f9605
 
-# FM Radio
-system_ext/lib64/libfmjni.so:system/lib64/libfmjni.so
-
 # GPS
 vendor/bin/bip
 vendor/bin/hw/android.hardware.gnss-service.mediatek
