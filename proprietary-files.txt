@@ -770,8 +770,6 @@ vendor/lib64/vendor.mediatek.hardware.videotelephony@1.0.so;MODULE_SUFFIX=_vendo
 # IMS-System
 system/bin/vtservice
 system/etc/init/init.vtservice.rc
-system/framework/mediatek-common.jar;BOOT_JAR
-system/framework/mediatek-framework.jar;BOOT_JAR
 system/framework/mediatek-ims-base.jar;BOOT_JAR
 system/framework/mediatek-ims-common.jar;BOOT_JAR
 system/framework/mediatek-ims-extension-plugin.jar;BOOT_JAR
