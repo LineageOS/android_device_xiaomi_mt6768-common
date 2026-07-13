@@ -166,7 +166,7 @@ PRODUCT_PACKAGES += \
     PowerOffAlarm
 
 # Properties
-include $(LOCAL_PATH)/vendor_logtag.mk
+include hardware/mediatek/configs/properties/vendor_logtag.mk
 
 # Permissions
 PRODUCT_COPY_FILES += \
