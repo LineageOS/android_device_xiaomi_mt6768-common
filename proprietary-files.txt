@@ -12,7 +12,6 @@ vendor/lib64/libaal_mtk.so
 vendor/lib64/libaalservice.so
 
 # Audio
-vendor/lib/hw/audio.r_submix.mt6768.so
 vendor/lib/lib_iir.so
 vendor/lib/lib_speech_enh.so
 vendor/lib/libalsautils.so:vendor/lib/libalsautils-v31.so;FIX_SONAME
