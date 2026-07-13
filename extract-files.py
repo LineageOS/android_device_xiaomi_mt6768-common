@@ -21,6 +21,7 @@ namespace_imports = [
     'device/xiaomi/mt6768-common',
     'hardware/mediatek',
     'hardware/mediatek/libmtkperf_client',
+    'hardware/xiaomi',
 ]
 
 def lib_fixup_vendor_suffix(lib: str, partition: str, *args, **kwargs):
@@ -65,6 +66,8 @@ blob_fixups: blob_fixups_user_type = {
             b'\x00\x14\xa0\x83\x5f\xb8\xfd\x7b\x43\xa9\xff\x03\x01\x91\xc0\x03\x5f\xd6\xff\x83\x01\xd1\xfd\x7b\x05\xa9\xfd\x43\x01\x91',
             b'\x00\x14\xa0\x83\x5f\xb8\xfd\x7b\x43\xa9\xff\x03\x01\x91\xc0\x03\x5f\xd6\x00\x00\xe0\xd2\xc0\x03\x5f\xd6\xfd\x43\x01\x91',
         ),
+    'vendor/lib64/libgoodixhwfingerprint.so': blob_fixup()
+        .replace_needed('libvendor.goodix.hardware.biometrics.fingerprint@2.1.so', 'vendor.goodix.hardware.biometrics.fingerprint@2.1.so'),
     'vendor/lib64/libmi_watermark.so': blob_fixup()
         .add_needed('libpiex_shim.so'),
     (
