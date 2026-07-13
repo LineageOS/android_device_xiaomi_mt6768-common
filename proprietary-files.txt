@@ -506,7 +506,7 @@ vendor/firmware/txpowerctrl.cfg
 vendor/firmware/wifi.cfg
 
 # Firmware - from A145PXXU1AWA3
-vendor/firmware/soc1_0_ram_bt_1a_1_hdr.bin|9cd0d79cde76a59ddd8545b1621af1176c5f9605
+vendor/firmware/soc1_0_ram_bt_1a_1_hdr.bin|120a92a1027779fcad268784486bf6a49a9bf466
 
 # GPS
 vendor/bin/bip
