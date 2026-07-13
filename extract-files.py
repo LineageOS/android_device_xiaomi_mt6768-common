@@ -48,8 +48,6 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libavservices_minijail_vendor.so', 'libavservices_minijail.so'),
     'vendor/bin/hw/mtkfusionrild' : blob_fixup()
         .add_needed('libutils-v32.so'),
-    'vendor/lib/hw/audio.primary.mt6768.so': blob_fixup()
-        .replace_needed('libalsautils.so', 'libalsautils-v31.so'),
     'vendor/lib64/hw/fingerprint.mt6768.so': blob_fixup()
         .binary_regex_replace(
             b'\xc0\x03\x5f\xd6\x00\x00\x00\x00\xff\x03\x01\xd1\xfd\x7b\x02\xa9',
