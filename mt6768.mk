@@ -250,6 +250,9 @@ PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek \
     android.hardware.usb.gadget-service.mediatek
 
+# Vendor init
+$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_xiaomi_mt6768)
+
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator-service.mediatek
