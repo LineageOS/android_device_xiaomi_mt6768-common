@@ -455,10 +455,8 @@ vendor/lib64/vendor.mediatek.hardware.pq@2.8.so
 vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
 
 # NVRAM
-vendor/bin/atcid
 vendor/bin/fuelgauged
 vendor/bin/hw/vendor.mediatek.hardware.nvram@1.1-service
-vendor/etc/init/atcid.rc
 vendor/etc/init/fuelgauged_init.rc
 vendor/etc/init/fuelgauged_nvram_init.rc
 vendor/etc/init/nvram_daemon.rc
@@ -475,7 +473,6 @@ vendor/lib64/libfile_op.so
 vendor/lib64/libnvram.so
 vendor/lib64/libnvram_sec.so
 vendor/lib64/libstorage_otp.so
-vendor/lib64/vendor.mediatek.hardware.atci@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.0.so
 vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 
