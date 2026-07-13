@@ -244,6 +244,9 @@ PRODUCT_SOONG_NAMESPACES += \
 PRODUCT_PACKAGES += \
     android.hardware.thermal@1.0-impl
 
+# UFFD GC
+PRODUCT_ENABLE_UFFD_GC := true
+
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.mediatek \
