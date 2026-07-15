@@ -46,8 +46,9 @@ blob_fixups: blob_fixups_user_type = {
     ): blob_fixup()
         .replace_needed('android.hardware.gnss-V1-ndk_platform.so', 'android.hardware.gnss-V1-ndk.so'),
     'vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b': blob_fixup()
-        .add_needed('libstagefright_foundation-v33.so')
-        .replace_needed('libavservices_minijail_vendor.so', 'libavservices_minijail.so'),
+        .add_needed('libstagefright_foundation-v33.so'),
+    ('vendor/lib64/libcodec2_mtk_c2store.so', 'vendor/lib64/libcodec2_mtk_vdec.so', 'vendor/lib64/libcodec2_mtk_venc.so', 'vendor/lib64/libcodec2_vpp_qt_plugin.so', 'vendor/lib64/libcodec2_vpp_rs_plugin.so'): blob_fixup()
+        .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
     'vendor/lib64/hw/fingerprint.mt6768.so': blob_fixup()
         .binary_regex_replace(
             b'\xc0\x03\x5f\xd6\x00\x00\x00\x00\xff\x03\x01\xd1\xfd\x7b\x02\xa9',
