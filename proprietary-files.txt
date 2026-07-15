@@ -521,32 +521,32 @@ vendor/lib64/libvcodec_oal.so
 vendor/lib64/libvcodecdrv_header_stub.so
 vendor/lib64/libvpu5.so
 
-# Media (Codec2)
-system/lib64/libstagefright_bufferqueue_helper.so:vendor/lib64/libstagefright_bufferqueue_helper-v31.so;FIX_SONAME
-vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b;SYMLINK=vendor/bin/hw/android.hardware.media.c2@1.2-mediatek
-vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc
-vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml:vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml
-vendor/lib64/libadpcmdec_mtk.so
-vendor/lib64/libalacdec_mtk.so
-vendor/lib64/libcodec2_hidl@1.0.so:vendor/lib64/libcodec2_hidl@1.0-v31.so;FIX_SONAME
-vendor/lib64/libcodec2_hidl@1.1.so:vendor/lib64/libcodec2_hidl@1.1-v31.so;FIX_SONAME
-vendor/lib64/libcodec2_hidl@1.2.so:vendor/lib64/libcodec2_hidl@1.2-v31.so;FIX_SONAME
-vendor/lib64/libcodec2_hidl_plugin.so:vendor/lib64/libcodec2_hidl_plugin-v31.so;FIX_SONAME
-vendor/lib64/libcodec2_mtk_c2store.so
-vendor/lib64/libcodec2_mtk_vdec.so
-vendor/lib64/libcodec2_mtk_venc.so
-vendor/lib64/libcodec2_soft_common.so:vendor/lib64/libcodec2_soft_common-v31.so;FIX_SONAME
-vendor/lib64/libcodec2_soft_mtk_alacdec.so
-vendor/lib64/libcodec2_soft_mtk_apedec.so
-vendor/lib64/libcodec2_soft_mtk_imaadpcmdec.so
-vendor/lib64/libcodec2_soft_mtk_mp3dec.so
-vendor/lib64/libcodec2_soft_mtk_msadpcmdec.so
-vendor/lib64/libcodec2_vndk.so:vendor/lib64/libcodec2_vndk-v31.so;FIX_SONAME
-vendor/lib64/libcodec2_vpp_qt_plugin.so
-vendor/lib64/libcodec2_vpp_rs_plugin.so
-vendor/lib64/libformatter.so
-vendor/lib64/libmp3dec_mtk.so
-vendor/lib64/libsfplugin_ccodec_utils.so:vendor/lib64/libsfplugin_ccodec_utils-v31.so;FIX_SONAME
+# Media (Codec2) - from selene-user 13 TP1A.220624.014 V14.0.6.0.TKUMIXM release-keys
+system/lib64/libstagefright_bufferqueue_helper.so:vendor/lib64/libstagefright_bufferqueue_helper-v33.so;FIX_SONAME|5549f581283eb85fb3530977fd810d733105331f|21fe40ac3d0fd39dc9db026f8e904120e5fbb520
+vendor/bin/hw/android.hardware.media.c2@1.2-mediatek-64b;SYMLINK=vendor/bin/hw/android.hardware.media.c2@1.2-mediatek|2add9d0e841fe23fe2734dcf2e50636b27c4c51a|5d392e2563e47783d74a4860229674fa95a4acec
+vendor/etc/init/android.hardware.media.c2@1.2-mediatek.rc|9fd0ee16d79ed8c7403c187ea8708c5b350e03ca
+vendor/etc/vintf/manifest/manifest_media_c2_V1_1_default.xml:vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml|9d6aa618b44ce23d3040f1f994692692458a9b7c|622d0480a3af7a162e37c56e0770213d8027000d
+vendor/lib64/libadpcmdec_mtk.so|29bff9cd502e5fe3e0c6f51a635c549807bcf27f
+vendor/lib64/libalacdec_mtk.so|4f8f8ab6f5c864f20668befe21eb6e75fb0f250e
+vendor/lib64/libcodec2_hidl@1.0.so:vendor/lib64/libcodec2_hidl@1.0-v31.so;FIX_SONAME|b346bf91476064af549b3db29ec10361c14a02de|3df6765e88c1595a2710f2187c06f5c2592dd8f9
+vendor/lib64/libcodec2_hidl@1.1.so:vendor/lib64/libcodec2_hidl@1.1-v31.so;FIX_SONAME|4ea4e857c513b507ea571b9d520c0996802ee9c6|273c6f90e02e7402df18d481d270bb29fb4bd3d3
+vendor/lib64/libcodec2_hidl@1.2.so:vendor/lib64/libcodec2_hidl@1.2-v31.so;FIX_SONAME|4cb1d8ca0674ef0b3c8383f8d4a6ac18ffef218c|19f758134593613735168f6a9ea169e62ab72cfc
+vendor/lib64/libcodec2_hidl_plugin.so:vendor/lib64/libcodec2_hidl_plugin-v31.so;FIX_SONAME|946adfc4e9dbab6e7aa783aaf3bbf30cb78cef81|0d3071578e7852fe57593d715a823e736ff6440f
+vendor/lib64/libcodec2_mtk_c2store.so|eaee9cc08babf6abaa37403ab9148400bf899d50|487916c546bff14b88625810e177e065e0da25c9
+vendor/lib64/libcodec2_mtk_vdec.so|991db9d7376326d1ae1279cff893d3607ffbbf74|f4b2d36994e8a59473c331d1df742a2c8494119a
+vendor/lib64/libcodec2_mtk_venc.so|7eecf88e62730aaa1ac67c56fe71b58154ffc94b|0a4242f48f5445205fe48310e62e7ca2c10219fe
+vendor/lib64/libcodec2_soft_common.so:vendor/lib64/libcodec2_soft_common-v31.so;FIX_SONAME|3d7f09e7cfdffcc9a7452da37ed42eb7121226ca|7d72cae54d6340919f2791bb2fc0f0fb831f7294
+vendor/lib64/libcodec2_soft_mtk_alacdec.so|e6e62da082bae890b23d6e2a662b64064b68a6ad
+vendor/lib64/libcodec2_soft_mtk_apedec.so|1a7cae7d7925cdfd8afe893283cb5350f4d08982
+vendor/lib64/libcodec2_soft_mtk_imaadpcmdec.so|c0083958ea251a201b3c22a2a8218e0f12e85649
+vendor/lib64/libcodec2_soft_mtk_mp3dec.so|3b7fa476fcba9e3305e4972f97d89692905d4457
+vendor/lib64/libcodec2_soft_mtk_msadpcmdec.so|4775081cf0da926c2c8f5c094398aa02b1422d94
+vendor/lib64/libcodec2_vndk.so:vendor/lib64/libcodec2_vndk-v31.so;FIX_SONAME|55884dac35ed03ee945d6367a7fbb3e65ca4d98f|e993a7228b04d7d47071c44e8982428a4be1f4b0
+vendor/lib64/libcodec2_vpp_qt_plugin.so|78bcb1ed94996007d4aee4682a89484cdb97d545|ee7da5b9fd1b4416c1b1e7873dc5a2b0e60a4275
+vendor/lib64/libcodec2_vpp_rs_plugin.so|8fd6e6eb740c828e0547ba13547181a903997ffe|ca67c6e010139df3308dc7aa6aa8e36f4a6d15af
+vendor/lib64/libformatter.so|3013202d91e39334cbecc97e478179e0c7050d6c
+vendor/lib64/libmp3dec_mtk.so|35d9864cc9435ce28a68874ea349d1efb1274547
+vendor/lib64/libsfplugin_ccodec_utils.so:vendor/lib64/libsfplugin_ccodec_utils-v31.so;FIX_SONAME|52bfcde688cf0bc04089804fefc523543650fd10|d4df8e8dcb2a32c9421fb5523ef9ee3e628722ef
 
 # MMS
 vendor/bin/hw/vendor.mediatek.hardware.mms@1.6-service
