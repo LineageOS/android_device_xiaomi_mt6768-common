@@ -667,6 +667,11 @@ vendor/lib64/libmtcloader.so
 # UDF
 vendor/lib64/libudf.so
 
+# USB
+vendor/bin/hw/android.hardware.usb@1.2-service-mediatekv2
+vendor/etc/init/android.hardware.usb@1.2-service-mediatekv2.rc
+vendor/etc/vintf/manifest/android.hardware.usb@1.2-service-mediatekv2.xml
+
 # WiFi
 vendor/bin/hw/tetheroffloadservice
 vendor/bin/wlan_assistant
