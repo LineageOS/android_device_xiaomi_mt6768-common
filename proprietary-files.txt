@@ -421,9 +421,7 @@ vendor/lib64/hw/libSoftGatekeeper.so;SYMLINK=vendor/lib/hw/gatekeeper.default.so
 
 # Keymaster
 vendor/bin/bp_kmsetkey_ca
-vendor/bin/hw/android.hardware.keymaster@4.1-service.beanpod
 vendor/bin/hw/vendor.mediatek.hardware.keymaster_attestation@1.1-service
-vendor/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc
 vendor/etc/init/microtrust.bp_kmsetkey_ca.rc
 vendor/etc/init/vendor.mediatek.hardware.keymaster_attestation@1.1-service.rc
 vendor/lib64/hw/kmsetkey.beanpod.so
@@ -433,6 +431,11 @@ vendor/lib64/liburee_meta_drmkeyinstall.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.0.so
 vendor/lib64/vendor.mediatek.hardware.keymaster_attestation@1.1.so
 vendor/lib64/wechat.beanpod.so
+
+# Keymaster - from selene-user 13 TP1A.220624.014 V14.0.6.0.TKUMIXM release-keys
+vendor/bin/hw/android.hardware.keymaster@4.1-service.beanpod|accd31189fe22ebcb175cf9e4f3793eb35787bf2
+vendor/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc|3d16915806df3134f1d220c21ef56d7b9964dc31
+vendor/lib64/libTEECommon.so|e05e083e68f6ff206066ff97a687188e6f7d52c3
 
 # PQ
 vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
@@ -700,7 +703,6 @@ vendor/lib64/libnxp_extamp_intf.so
 vendor/lib64/libtflite_mtk.so
 
 # TEE
-vendor/lib64/libTEECommon.so
 vendor/lib64/libimsg_log.so
 vendor/lib64/libteeclientjni.so
 vendor/lib64/libteeclientjni@1.1.so
