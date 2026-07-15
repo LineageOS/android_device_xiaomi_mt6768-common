@@ -353,7 +353,6 @@ vendor/bin/hw/android.hardware.gnss-service.mediatek
 vendor/bin/ipsec_mon
 vendor/bin/lbs_hidl_service
 vendor/bin/mnld
-vendor/bin/mtk_agpsd
 vendor/etc/init/android.hardware.gnss-service.mediatek.rc
 vendor/etc/init/init.bip.rc
 vendor/etc/init/init.gps_drv.rc
@@ -393,6 +392,9 @@ vendor/lib64/libsimaka.so
 vendor/lib64/libssl-mdapp.so
 vendor/lib64/libstrongswan.so
 vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
+
+# GPS - from selene-user 13 TP1A.220624.014 V14.0.6.0.TKUMIXM release-keys
+vendor/bin/mtk_agpsd|f7dc331a445724bcac7d3c461e8790e4001806f9
 
 # GPS (Configs)
 vendor/etc/gnss/agps_profiles_conf2.xml
