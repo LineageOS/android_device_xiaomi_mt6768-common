@@ -77,6 +77,8 @@ blob_fixups: blob_fixups_user_type = {
          .add_needed('libbase_shim.so'),
     'vendor/lib64/hw/hwcomposer.mt6768.so' : blob_fixup()
          .add_needed('libprocessgroup_shim.so'),
+    'vendor/etc/vintf/manifest/manifest_media_c2_V1_2_default.xml': blob_fixup()
+        .regex_replace('1.1', '1.2'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
