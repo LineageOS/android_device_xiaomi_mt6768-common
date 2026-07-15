@@ -133,6 +133,8 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(LOCAL_PATH)/configs/media,$(TARGET_COPY_OUT_VENDOR)/etc)
 
 # Overlays
+$(call inherit-product, hardware/mediatek/overlay/mssi.mk)
+
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
 
@@ -144,10 +146,10 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += \
 PRODUCT_PACKAGES += \
     CarrierConfigOverlayMT6768 \
     FrameworksResOverlayMT6768 \
-    SettingsOverlayMT6768 \
-    TelephonyOverlayMT6768 \
-    TetheringConfigOverlayMT6768 \
-    WifiOverlayMT6768
+    SettingsOverlayMT6768
+
+# Platform
+TARGET_BOARD_PLATFORM := mt6768
 
 # Power
 PRODUCT_PACKAGES += \
@@ -208,6 +210,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.verified_boot.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.verified_boot.xml \
     frameworks/native/data/etc/android.software.opengles.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.opengles.deqp.level.xml \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
+
+# RIL
+ENABLE_VENDOR_RIL_SERVICE := true
 
 # Rootdir
 PRODUCT_PACKAGES += \

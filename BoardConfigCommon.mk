@@ -108,7 +108,6 @@ TARGET_COPY_OUT_PRODUCT := product
 TARGET_COPY_OUT_SYSTEM_EXT := system_ext
 
 # Platform
-TARGET_BOARD_PLATFORM := mt6768
 BOARD_HAS_MTK_HARDWARE := true
 
 # Properties
@@ -124,9 +123,6 @@ TARGET_USERIMAGES_USE_F2FS := true
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
-
-# RIL
-ENABLE_VENDOR_RIL_SERVICE := true
 
 # Sepolicy
 include device/mediatek/sepolicy_vndr/SEPolicy.mk
