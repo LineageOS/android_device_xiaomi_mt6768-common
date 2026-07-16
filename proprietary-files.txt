@@ -602,6 +602,7 @@ system_ext/framework/mediatek-telecom-common.jar:system/framework/mediatek-telec
 system_ext/framework/mediatek-telephony-base.jar:system/framework/mediatek-telephony-base.jar;BOOT_JAR|6248b5b3fcf935ef59ab3c20b0c11a104e8fbe79
 system_ext/framework/mediatek-telephony-common.jar:system/framework/mediatek-telephony-common.jar;BOOT_JAR|cee3f9c3dad9da1a98a5231fb2a942c41de62676
 system_ext/priv-app/ImsService/ImsService.apk:system/priv-app/ImsService/ImsService.apk|e4bc27e84c86a03f1db24d206f7f153697f9b7f2|7152630aeffffec91056fd216316408e30daf16f
+system_ext/priv-app/MtkGbaService/MtkGbaService.apk:system/priv-app/MtkGbaService/MtkGbaService.apk|adad27985f2cccb17f7c7e02b5661ac3850451f4
 
 # Power
 vendor/lib64/vendor.mediatek.hardware.power@1.1.so
