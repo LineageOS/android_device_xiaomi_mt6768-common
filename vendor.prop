@@ -138,6 +138,9 @@ ro.vendor.builtin_fm_antenna_support=1
 persist.vendor.connsys.fm_chipid=mt6631
 persist.vendor.connsys.fm_short_antenna_support=1
 
+# Fingerprint
+persist.vendor.fingerprint.type=rear
+
 # FRP
 ro.frp.pst=/dev/block/platform/bootdevice/by-name/frp
 

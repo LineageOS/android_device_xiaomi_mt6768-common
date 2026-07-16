@@ -290,8 +290,8 @@ vendor/lib64/mt6768/libnir_neon_driver.so;SYMLINK=vendor/lib64/libnir_neon_drive
 vendor/lib64/vendor.mediatek.hardware.composer_ext@1.0.so
 
 # Fingerprint
-vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.mt6768.so;FIX_SONAME
-vendor/lib64/hw/gf_fingerprint.default.so;FIX_SONAME
+vendor/lib64/hw/fingerprint.default.so:vendor/lib64/hw/fingerprint.fpc.default.so;FIX_SONAME
+vendor/lib64/hw/gf_fingerprint.default.so:vendor/lib64/hw/gf_fingerprint.goodix.default.so;FIX_SONAME
 vendor/lib64/libgf_ca.so
 vendor/lib64/libgf_hal.so
 vendor/lib64/libgoodixhwfingerprint.so
