@@ -206,7 +206,6 @@ vendor/etc/audio_param_global/VolumeGainMap_AudioParam.xml
 vendor/etc/audio_param_global/VolumeGainMap_ParamUnitDesc.xml
 vendor/etc/audio_param_global/Volume_AudioParam.xml
 vendor/etc/audio_param_global/Volume_ParamUnitDesc.xml
-vendor/etc/aurisys_config.xml
 
 # Bluetooth
 vendor/etc/init/init.bt_drv.rc
