@@ -1,8 +1,10 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
 runtime_resource_overlay {
     name: "CarrierConfigOverlayMT6768",
-    theme: "CarrierConfigOverlay",
-    certificate: "platform",
-    sdk_version: "current",
     product_specific: true,
-    aaptflags: ["--keep-raw-values"]
+    aaptflags: ["--keep-raw-values"],
 }

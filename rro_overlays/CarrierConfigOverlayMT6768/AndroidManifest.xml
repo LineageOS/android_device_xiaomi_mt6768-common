@@ -1,11 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.carrierconfig.MT6768"
-    android:versionCode="1"
-    android:versionName="1.0">
-    <application android:hasCode="false" />
-    <overlay
-      android:targetPackage="com.android.carrierconfig"
-      android:targetName="CarrierConfig"
-      android:isStatic="true"
-      android:priority="0"/>
+          package="com.android.carrierconfig.overlay.mt6768">
+    <overlay android:targetPackage="com.android.carrierconfig"
+             android:isStatic="true"
+             android:priority="200" />
 </manifest>
