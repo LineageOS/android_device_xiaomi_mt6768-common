@@ -97,6 +97,10 @@ on charger
     chown system system /sys/devices/platform/1100a000.spi0/spi_master/spi0/spi0.0/fts_rw_reg
     chmod 0660 /sys/devices/platform/1100a000.spi0/spi_master/spi0/spi0.0/fts_rw_reg
 
+    # Turn backlight on and switch to backlight trigger
+    write /sys/class/leds/lcd-backlight/brightness "1000"
+    write /sys/class/leds/lcd-backlight/trigger "backlight"
+
     start vendor.light-default
     start mi_thermald
 
