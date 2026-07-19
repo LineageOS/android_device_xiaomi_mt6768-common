@@ -263,7 +263,6 @@ ro.vendor.mtk_cta_set=1
 persist.vendor.md_c2k_cap_dep_check=0
 ro.vendor.md_log_memdump_wait=15
 ro.vendor.mtk_modem_monitor_support=1
-import /vendor/build_${ro.boot.radio.multisim.config}_vendor.prop
 
 # Sensors
 ro.vendor.mtk.sensor.support=yes
