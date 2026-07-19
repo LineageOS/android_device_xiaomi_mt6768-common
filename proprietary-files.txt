@@ -7,7 +7,6 @@ vendor/lib64/libaedv.so
 vendor/lib64/libladder.so
 
 # AAL
-vendor/lib64/libaal_key.so
 vendor/lib64/libaal_mtk.so
 vendor/lib64/libaalservice.so
 
