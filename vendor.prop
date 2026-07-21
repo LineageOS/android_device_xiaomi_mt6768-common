@@ -163,14 +163,6 @@ persist.vendor.mtk.volte.enable=1
 persist.vendor.vilte_support=1
 persist.vendor.viwifi_support=1
 
-# LMK
-ro.lmk.psi_complete_stall_ms=35
-ro.lmk.swap_free_low_percentage=10
-ro.lmk.psi_partial_stall_ms=35
-ro.lmk.thrashing_limit=10
-ro.lmk.thrashing_limit_decay=2
-ro.lmk.kill_timeout_ms=100
-
 # MIUI
 sys.fp.miui.token=0
 persist.sys.mms.compact_enable=true
