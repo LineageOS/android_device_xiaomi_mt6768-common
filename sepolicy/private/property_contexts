@@ -14,3 +14,7 @@ gf.debug.dump_data                                      u:object_r:system_finger
 gf.debug.dump_bigdata_data                              u:object_r:system_fingerprint_prop:s0
 persist.sys.fp.goodix.                                  u:object_r:system_fingerprint_prop:s0
 persist.sys.fp.info                                     u:object_r:system_fingerprint_prop:s0
+
+# Global
+ro.fota.oem                                             u:object_r:build_prop:s0
+ro.product.marketname                                   u:object_r:build_prop:s0
