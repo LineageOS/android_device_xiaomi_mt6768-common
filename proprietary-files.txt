@@ -551,17 +551,17 @@ vendor/lib64/libformatter.so|fbef29f4cdab3978ba7dfb99ab8ee324daf2e723
 vendor/lib64/libmp3dec_mtk.so|35d9864cc9435ce28a68874ea349d1efb1274547
 vendor/lib64/libsfplugin_ccodec_utils.so:vendor/lib64/libsfplugin_ccodec_utils-v31.so;FIX_SONAME|1a8b85f3d7829f73f83f4c9962317cbc6bff4507|5f2f91fc869337f19fa87df9ebfdd537df8d2d23
 
-# MMS
-vendor/bin/hw/vendor.mediatek.hardware.mms@1.6-service
-vendor/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc
-vendor/lib64/hw/vendor.mediatek.hardware.mms@1.6-impl.so
-vendor/lib64/vendor.mediatek.hardware.mms@1.0.so
-vendor/lib64/vendor.mediatek.hardware.mms@1.1.so
-vendor/lib64/vendor.mediatek.hardware.mms@1.2.so
-vendor/lib64/vendor.mediatek.hardware.mms@1.3.so
-vendor/lib64/vendor.mediatek.hardware.mms@1.4.so
-vendor/lib64/vendor.mediatek.hardware.mms@1.5.so
-vendor/lib64/vendor.mediatek.hardware.mms@1.6.so
+# MMS - from earth-user 14 UP1A.231005.007 V816.0.16.0.UCVMIXM release-keys
+vendor/bin/hw/vendor.mediatek.hardware.mms@1.6-service|d9541b0a6fa8da74d3f61e5a4842c2d4112927bb
+vendor/etc/init/vendor.mediatek.hardware.mms@1.6-service.rc|dfbf35e6962c6e11eab3af859e23dbc2ee28a4e4
+vendor/lib64/hw/vendor.mediatek.hardware.mms@1.6-impl.so|e9b5decb8e8402eb2712eacfb10aa606281095a4
+vendor/lib64/vendor.mediatek.hardware.mms@1.0.so|61da5408c8f31d72889fea66bc9c6ca742be2139
+vendor/lib64/vendor.mediatek.hardware.mms@1.1.so|e2023d2648b7a3fed98f235fe5937c6ba2948cb0
+vendor/lib64/vendor.mediatek.hardware.mms@1.2.so|67487d3496a896a519b41b8ad53a2ee652248a26
+vendor/lib64/vendor.mediatek.hardware.mms@1.3.so|c708746e25b70b52a968fe847248d408153a692c
+vendor/lib64/vendor.mediatek.hardware.mms@1.4.so|a6a40e817b1e8fdbed1d3b17234e17e898f1a376
+vendor/lib64/vendor.mediatek.hardware.mms@1.5.so|96ac33822fe06759994064aad08bad7708f3c988
+vendor/lib64/vendor.mediatek.hardware.mms@1.6.so|30a271e1000286a1cdc1b3cd9e24a696ea907e46
 
 # IMS
 vendor/bin/hw/vendor.mediatek.hardware.mmagent@1.1-service
