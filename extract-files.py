@@ -101,7 +101,7 @@ blob_fixups: blob_fixups_user_type = {
             b'\xc0\x03\x5f\xd6\x00\x00\x00\x00\xff\x03\x01\xd1\xfd\x7b\x02\xa9',
             b'\xc0\x03\x5f\xd6\x00\x00\x00\x00\xc0\x03\x5f\xd6\xfd\x7b\x02\xa9',
         ),
-    'vendor/lib64/hw/vendor.mediatek.hardware.pq@2.13-impl.so': blob_fixup()
+    'vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so': blob_fixup()
         .replace_needed('libutils.so', 'libutils-v32.so')
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     (

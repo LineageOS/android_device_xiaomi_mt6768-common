@@ -444,26 +444,30 @@ vendor/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc|3d16915806df31
 vendor/lib64/libTEECommon.so|e05e083e68f6ff206066ff97a687188e6f7d52c3
 
 # PQ
-vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service
-vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc
-vendor/lib64/hw/vendor.mediatek.hardware.pq@2.13-impl.so
 vendor/lib64/libpq_cust.so
-vendor/lib64/libpq_cust_base.so
-vendor/lib64/mt6768/libpq_prot.so;SYMLINK=vendor/lib64/libpq_prot.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.0.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.1.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.10.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.11.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.12.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.13.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.2.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.3.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.4.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.5.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.6.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.7.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.8.so
-vendor/lib64/vendor.mediatek.hardware.pq@2.9.so
+
+# PQ - from earth-user 14 UP1A.231005.007 V816.0.16.0.UCVMIXM release-keys
+vendor/bin/hw/vendor.mediatek.hardware.pq@2.2-service|2a4ef9ede32d37615b1372d200678562b70934ae
+vendor/etc/init/vendor.mediatek.hardware.pq@2.2-service.rc|80106d28e86f0091c2846d1b16be8ffbd71c112f
+vendor/lib64/hw/vendor.mediatek.hardware.pq@2.15-impl.so|19da9dd2846b1b115df091f00da1001ca4e23e14|7819e85ef5334bea3f1fec9c4a04e4080a4b649e
+vendor/lib64/libpq_cust_base.so|9e59e83888df18eb3d92ca35e0fadf91cb5920c4
+vendor/lib64/mt6768/libpq_prot.so;SYMLINK=vendor/lib64/libpq_prot.so|f43970b8a58118b2b9911b3b62c31f0a275dafeb
+vendor/lib64/vendor.mediatek.hardware.pq@2.0.so|a5cd03bd14bca442de4c43efdd9998b4d15205fc
+vendor/lib64/vendor.mediatek.hardware.pq@2.1.so|e7b731e47f5c562a45298770e4e7bba93f4ffff4
+vendor/lib64/vendor.mediatek.hardware.pq@2.10.so|dac7b831e09a9664d81aa435d455227df494ea76
+vendor/lib64/vendor.mediatek.hardware.pq@2.11.so|708ef8765a0e159d76c5857d7a325a6ce3685fe3
+vendor/lib64/vendor.mediatek.hardware.pq@2.12.so|a72217b2e7a0c210bdf64f4d9c5d78fcdbeb498d
+vendor/lib64/vendor.mediatek.hardware.pq@2.13.so|25c406e9903934db05849a891feaa939d49b1074
+vendor/lib64/vendor.mediatek.hardware.pq@2.14.so|2880b356e310ddcf0c39bfa35e3db96bc7f8da27
+vendor/lib64/vendor.mediatek.hardware.pq@2.15.so|de2053b9bd3ce4df15c2e98e1650edc44418b002
+vendor/lib64/vendor.mediatek.hardware.pq@2.2.so|c8c063fd5f287e20523c332f8d0d2ebd269708c7
+vendor/lib64/vendor.mediatek.hardware.pq@2.3.so|2b5543ace4e7be9ce73708ba8866bb3bd6fd79fa
+vendor/lib64/vendor.mediatek.hardware.pq@2.4.so|9e6daf332947ef7588384875558ae9ae50177e3f
+vendor/lib64/vendor.mediatek.hardware.pq@2.5.so|1a81a07f01d83d0ab67cfe98902d9e33eea16c0b
+vendor/lib64/vendor.mediatek.hardware.pq@2.6.so|4f1e71ee7ad3252da40455dc75ebbeaaad76314d
+vendor/lib64/vendor.mediatek.hardware.pq@2.7.so|6fbd9cd6d63283620d0fcf26f2bf8c68bda8d16b
+vendor/lib64/vendor.mediatek.hardware.pq@2.8.so|aa0cdf1531f67f8f985f5405339f19cbaaffd52a
+vendor/lib64/vendor.mediatek.hardware.pq@2.9.so|7d892251112e27eb36a7295d23cea10ca74e070f
 
 # NVRAM
 vendor/bin/fuelgauged
