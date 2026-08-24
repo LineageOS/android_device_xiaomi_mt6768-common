@@ -211,6 +211,7 @@ PRODUCT_PACKAGES += \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6768.rc \
+    init.mt6768.power.rc \
     init.sensor_1_0.rc \
     ueventd.mtk.rc
 
