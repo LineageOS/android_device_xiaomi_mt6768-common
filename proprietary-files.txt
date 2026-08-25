@@ -672,13 +672,11 @@ vendor/lib64/libudf.so
 
 # WiFi
 vendor/bin/hw/tetheroffloadservice
-vendor/bin/wlan_assistant
 vendor/bin/wmt_launcher
 vendor/bin/wmt_loader
 vendor/etc/init/init.wlan_drv.rc
 vendor/etc/init/init.wmt_drv.rc
 vendor/etc/init/tetheroffloadservice.rc
-vendor/etc/init/wlan_assistant.rc
 vendor/lib64/libapmonitor_vendor.so
 vendor/lib64/libconnfem.so
 vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
