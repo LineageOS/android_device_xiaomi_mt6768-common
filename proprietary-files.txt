@@ -1,11 +1,5 @@
 # Unpinned blobs from lancelot-user 12 SP1A.210812.016 V13.0.4.0.SJCMIXM release-keys
 
-# AEE
-vendor/lib/libaedv.so
-vendor/lib/libladder.so
-vendor/lib64/libaedv.so
-vendor/lib64/libladder.so
-
 # AAL
 vendor/lib64/libaal_mtk.so
 vendor/lib64/libaalservice.so
