@@ -54,20 +54,20 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/lib64/hw/sensors.mediatek.V2.0.so': blob_fixup()
        .replace_needed('libstagefright_foundation.so', 'libstagefright_foundation-v33.so'),
     'vendor/lib64/libcodec2_hidl@1.0-v31.so': blob_fixup()
-        .replace_needed('libstagefright_bufferqueue_helper.so', 'libstagefright_bufferqueue_helper-v33.so')
+        .replace_needed('libstagefright_bufferqueue_helper.so', 'libstagefright_bufferqueue_helper-v31.so')
         .replace_needed('libcodec2_hidl_plugin.so', 'libcodec2_hidl_plugin-v31.so')
         .replace_needed('libcodec2_vndk.so', 'libcodec2_vndk-v31.so')
         .replace_needed('libui.so', 'libui-v34.so')
         .add_needed('libbase_shim.so'),
     'vendor/lib64/libcodec2_hidl@1.1-v31.so': blob_fixup()
-        .replace_needed('libstagefright_bufferqueue_helper.so', 'libstagefright_bufferqueue_helper-v33.so')
+        .replace_needed('libstagefright_bufferqueue_helper.so', 'libstagefright_bufferqueue_helper-v31.so')
         .replace_needed('libcodec2_hidl@1.0.so', 'libcodec2_hidl@1.0-v31.so')
         .replace_needed('libcodec2_hidl_plugin.so', 'libcodec2_hidl_plugin-v31.so')
         .replace_needed('libcodec2_vndk.so', 'libcodec2_vndk-v31.so')
         .replace_needed('libui.so', 'libui-v34.so')
         .add_needed('libbase_shim.so'),
     'vendor/lib64/libcodec2_hidl@1.2-v31.so': blob_fixup()
-        .replace_needed('libstagefright_bufferqueue_helper.so', 'libstagefright_bufferqueue_helper-v33.so')
+        .replace_needed('libstagefright_bufferqueue_helper.so', 'libstagefright_bufferqueue_helper-v31.so')
         .replace_needed('libcodec2_hidl@1.0.so', 'libcodec2_hidl@1.0-v31.so')
         .replace_needed('libcodec2_hidl@1.1.so', 'libcodec2_hidl@1.1-v31.so')
         .replace_needed('libcodec2_hidl_plugin.so', 'libcodec2_hidl_plugin-v31.so')
