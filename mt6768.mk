@@ -211,7 +211,6 @@ PRODUCT_PACKAGES += \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6768.rc \
-    init.mt6768.usb.rc \
     init.sensor_1_0.rc \
     ueventd.mtk.rc
 
@@ -244,7 +243,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_ENABLE_UFFD_GC := true
 
 # USB
-$(call soong_config_set_bool,mediatek_gadget,use_custom_usb_gadget_rc,true)
+PRODUCT_PACKAGES += \
+    android.hardware.usb-service.mediatek \
+    android.hardware.usb.gadget-service.mediatek \
+    init.mt6768.usb.rc
 
 # Vibrator
 PRODUCT_PACKAGES += \
