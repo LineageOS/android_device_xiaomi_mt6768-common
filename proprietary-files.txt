@@ -435,6 +435,7 @@ vendor/lib64/wechat.beanpod.so
 # Keymaster - from selene-user 13 TP1A.220624.014 V14.0.6.0.TKUMIXM release-keys
 vendor/bin/hw/android.hardware.keymaster@4.1-service.beanpod|accd31189fe22ebcb175cf9e4f3793eb35787bf2
 vendor/etc/init/android.hardware.keymaster@4.1-service.beanpod.rc|3d16915806df3134f1d220c21ef56d7b9964dc31
+vendor/lib/libTEECommon.so|626e2b259cde0b2040d89af7593bb0d66c9dbe33
 vendor/lib64/libTEECommon.so|e05e083e68f6ff206066ff97a687188e6f7d52c3
 
 # PQ
@@ -489,6 +490,8 @@ vendor/lib64/vendor.mediatek.hardware.nvram@1.1.so
 vendor/bin/vpud|dddcf02503e2fb64a6c01b44359b7c39fdc5a9aa
 vendor/etc/init/vpud.rc|b4d3ea1ac1b3ab28aed836de823876bc525217e6
 vendor/etc/mtk_platform_codecs_config.xml|aff4fedfc8b484d2d9c5c40aa09851eaf693a7e8
+vendor/lib/AVCSecureVdecCA.so|4a492e5ce4035bd265f6e1a51e61851e628f6c1d
+vendor/lib/VP9SecureVdecCA.so|ff742acc5b007a3cd34bc04c1d931960519640fb
 vendor/lib/libHEVCdec_sa.ca7.android.so;DISABLE_CHECKELF|04e927f7b3099725a96e7d8d33d7060a5651daf4
 vendor/lib/libbwc.so|238f88aaa5faf1a6e2ab30c50643bcf009038d91
 vendor/lib/libh264dec_customize.so|e85ef1978db37d370d0b7f3f497d8f09eb8d0578
