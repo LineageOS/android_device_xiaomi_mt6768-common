@@ -200,6 +200,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.opengles.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.opengles.deqp.level.xml \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
 
+# Recovery
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.vendor.recovery_update=true
+
 # RIL
 ENABLE_VENDOR_RIL_SERVICE := true
 
