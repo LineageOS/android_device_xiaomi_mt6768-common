@@ -602,8 +602,7 @@ system_ext/framework/mediatek-ims-common.jar:system/framework/mediatek-ims-commo
 system_ext/framework/mediatek-ims-extension-plugin.jar:system/framework/mediatek-ims-extension-plugin.jar;BOOT_JAR|4562720d65136b189d661f248fd3170a749cada3
 system_ext/framework/mediatek-telecom-common.jar:system/framework/mediatek-telecom-common.jar;BOOT_JAR|686eaf0a472f44194116a0861944483cd9b09a38
 system_ext/framework/mediatek-telephony-base.jar:system/framework/mediatek-telephony-base.jar;BOOT_JAR|6248b5b3fcf935ef59ab3c20b0c11a104e8fbe79
-system_ext/framework/mediatek-telephony-common.jar:system/framework/mediatek-telephony-common.jar;BOOT_JAR|cee3f9c3dad9da1a98a5231fb2a942c41de62676
-system_ext/priv-app/ImsService/ImsService.apk:system/priv-app/ImsService/ImsService.apk|e4bc27e84c86a03f1db24d206f7f153697f9b7f2|7152630aeffffec91056fd216316408e30daf16f
+system_ext/priv-app/ImsService/ImsService.apk:system/priv-app/ImsService/ImsService.apk|e4bc27e84c86a03f1db24d206f7f153697f9b7f2|2e3bc5947af0f6a725f45c91fbf080ae1c11aad4
 system_ext/priv-app/MtkGbaService/MtkGbaService.apk:system/priv-app/MtkGbaService/MtkGbaService.apk|adad27985f2cccb17f7c7e02b5661ac3850451f4
 
 # Power
