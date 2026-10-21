@@ -387,7 +387,6 @@ vendor/lib64/libmnl.so:vendor/lib64/libmnl_mtk.so;FIX_SONAME
 vendor/lib64/libsimaka.so
 vendor/lib64/libssl-mdapp.so
 vendor/lib64/libstrongswan.so
-vendor/lib64/vendor.mediatek.hardware.lbs@1.0.so
 
 # GPS - from selene-user 13 TP1A.220624.014 V14.0.6.0.TKUMIXM release-keys
 vendor/bin/mtk_agpsd|f7dc331a445724bcac7d3c461e8790e4001806f9
@@ -683,7 +682,6 @@ vendor/lib64/libconnfem.so
 vendor/lib64/libwifi-hal.so:vendor/lib64/libwifi-hal-mtk.so;FIX_SONAME
 vendor/lib64/libwifitest.so
 vendor/lib64/vendor.mediatek.hardware.apmonitor@2.0.so
-vendor/lib64/vendor.mediatek.hardware.netdagent@1.0.so
 
 # Xiaomi
 vendor/bin/LDC_packdata_xiaomi_C3_src1_3264x2448_v4_20190730.dat
