@@ -561,6 +561,7 @@ vendor/bin/hw/vtservice_hidl
 vendor/bin/wfca
 vendor/etc/init/init.vtservice_hidl.rc
 vendor/etc/init/init.wfca.rc
+vendor/etc/init/init.wod.rc
 vendor/etc/init/vendor.mediatek.hardware.mmagent@1.1-service.rc
 vendor/lib/librcs_interface.so
 vendor/lib/libvt_custom.so
